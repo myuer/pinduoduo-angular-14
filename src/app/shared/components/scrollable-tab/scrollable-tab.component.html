@@ -1,0 +1,11 @@
+<ul>
+  <li *ngFor="let menuItem of menu; let i = index; trackBy: trackFn">
+    <a 
+    [class.active]="selectedIndex == i"
+    (click)="handleTabSelected(i)"
+    href="#">
+      {{menuItem.title}}
+    </a>
+    <span class="indictor" *ngIf="selectedIndex == i"></span>
+  </li>
+</ul>

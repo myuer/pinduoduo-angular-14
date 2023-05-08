@@ -1,0 +1,31 @@
+ul {
+    display: flex;
+    overflow-x: scroll;
+    -webkit-overflow-scrolling: touch;
+}
+
+ul li {
+    display: inline-block;
+    margin: 0 5px;
+    white-space: nowrap;
+}
+
+a {
+    text-decoration: none;
+}
+
+::-webkit-scrollbar{
+    display: none;
+}
+
+.indictor{
+    background-color: #f00;
+    height: 2px;
+    width: 100%;
+    display: block;
+    margin-top: 2px;
+}
+
+.active{
+    color: #f00;
+}

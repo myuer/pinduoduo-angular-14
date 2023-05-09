@@ -1,2 +1,5 @@
-<app-scrollable-tab [menu]="menu" (tabSelected)="handleTabSelected($event)"></app-scrollable-tab>
-<app-swiper [sliders]="imageSliders"></app-swiper>
+<router-outlet></router-outlet>
+<app-bottom-bar
+  [selectedBarIdx]="selectedBarIdx$ | async"
+  (selectedBar)="toggleBar($event)"
+></app-bottom-bar>

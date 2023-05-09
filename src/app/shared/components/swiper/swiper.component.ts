@@ -1,7 +1,7 @@
-import { AfterViewInit, Component, ElementRef, Input, OnInit, QueryList, Renderer2, ViewChild, ViewChildren } from '@angular/core';
+import { AfterViewInit, ChangeDetectionStrategy, Component, ElementRef, Input, OnInit, QueryList, Renderer2, ViewChild, ViewChildren } from '@angular/core';
 import { Confirmable, Emoji } from '../../decorators';
 
-export interface ImageSlider {
+export interface IImageSlider {
   imgUrl: string;
   link: string;
   caption: string;
@@ -18,10 +18,13 @@ class MyClass<T> {
 @Component({
   selector: 'app-swiper',
   templateUrl: './swiper.component.html',
-  styleUrls: ['./swiper.component.css']
+  styleUrls: ['./swiper.component.css'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class SwiperComponent implements OnInit, AfterViewInit {
-  @Input() sliders: ImageSlider[] = [];
+  @Input() sliders: IImageSlider[] = [];
+  @Input() sliderHeight = '160px';
+  
   @ViewChildren('img') imgs: QueryList<ElementRef>
   @ViewChild('imageSlider') imgSlider: ElementRef;
   @Input() intervalBySeconds = 2000;
@@ -31,6 +34,7 @@ export class SwiperComponent implements OnInit, AfterViewInit {
 
    // 注解可以应用于变量，方法和类
    @Emoji() result = '您好';
+   
   constructor(private rd2: Renderer2) { }
 
   ngOnInit() {

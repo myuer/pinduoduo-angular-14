@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container" [ngStyle]="{ height: sliderHeight }">
   <div class="image-slider" #imageSlider (scroll)="handleScroll($event)" >
     <img *ngFor="let image of sliders;" [src]="image.imgUrl" [alt]="image.caption" />
   </div>
@@ -11,6 +11,6 @@
   </div>
 </div>
 
-<div (click)="modal()">
+<!-- <div (click)="modal()">
   {{result}}
-</div>
+</div> -->

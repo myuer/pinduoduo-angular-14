@@ -1,0 +1,12 @@
+<app-scrollable-tab
+  [menu]="menu$ | async"
+  (tabSelected)="handleTabSelected($event)"
+></app-scrollable-tab>
+<!-- <app-swiper [sliders]="imageSliders"></app-swiper>
+<app-horizontal-grid>
+  <div appGridItem *ngFor="let item of channels">
+    <img [src]="item.icon" alt="" appGridItemImage="2rem" [fitMode]="'cover'" />
+    <span appGridItemTitle=".6rem">{{ item.title }}</span>
+  </div>
+</app-horizontal-grid> -->
+<router-outlet></router-outlet>

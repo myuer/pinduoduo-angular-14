@@ -10,12 +10,5 @@
   </app-horizontal-grid>
 </div>
 <ng-template #other> Other works </ng-template>
-<a
-  [routerLink]="['grand']"
-  routerLinkActive="active"
-  [queryParams]="{ name: 'zhangsan', gender: 'male' }"
-  >link to grand</a
->
 <app-count-down [startTime]="startTime" [endTime]="endTime"></app-count-down>
-
 <router-outlet></router-outlet>

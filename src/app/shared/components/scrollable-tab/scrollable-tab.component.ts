@@ -21,13 +21,16 @@ interface Dict {
 })
 export class ScrollableTabComponent implements OnInit {
   @Output() tabSelected = new EventEmitter();
+  @Input() selectedTabLink: string;
+  @Input() menu: IMenu[] = [];
+
+
+  
   constructor() { }
 
   ngOnInit() {
   }
 
-  selectedIndex = -1;
-  @Input() menu: IMenu[] = [];
 
   // 声明函数
   add: addFunc = (x, y) => x + y;
@@ -40,9 +43,8 @@ export class ScrollableTabComponent implements OnInit {
   }
 
   // 选中的menu
-  handleTabSelected(index: number){
-    this.selectedIndex = index;
-    this.tabSelected.emit(this.menu[this.selectedIndex])
+  handleTabSelected(index: number) {
+    this.tabSelected.emit(this.menu[index])
   }
 
 }

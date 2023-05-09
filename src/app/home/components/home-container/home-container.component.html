@@ -1,6 +1,7 @@
 <app-scrollable-tab
   [menu]="menu$ | async"
   (tabSelected)="handleTabSelected($event)"
+  [selectedTabLink]="selectedTabLink$ | async"
 ></app-scrollable-tab>
 <!-- <app-swiper [sliders]="imageSliders"></app-swiper>
 <app-horizontal-grid>

@@ -8,6 +8,10 @@ import { HomeModule, NotificationInterceptor, ParamInterceptor } from './home';
 import localeZh from '@angular/common/locales/zh-Hans';
 import { registerLocaleData } from '@angular/common';
 import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http'
+import { MyModule } from './my';
+import { RecommendModule } from './recommend';
+import { ChatModule } from './chat';
+import { CategoryModule } from './category';
 @NgModule({
   declarations: [
     AppComponent,
@@ -18,7 +22,11 @@ import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http'
     SharedModule,
     AppRoutingModule,
     HttpClientModule,
-    HomeModule
+    HomeModule,
+    RecommendModule,
+    CategoryModule,
+    ChatModule,
+    MyModule,
   ],
   providers: [
     {

@@ -5,6 +5,10 @@ import { BottomBarComponent, CountDownComponent, ScrollableTabComponent, SwiperC
 import { HorizontalGridComponent } from './components/horizontal-grid/horizontal-grid.component';
 import { GridItemDirective, GridItemImageDirective, GridItemTitleDirective } from './directives';
 import { AgoPipe } from './pipes';
+import { VerticalGridComponent } from './components/vertical-grid/vertical-grid.component';
+import { ProductCardComponent } from './components/product-card/product-card.component';
+import { TagDirective } from './directives/tag.directive';
+import { AvatarDirective } from './directives/avatar.directive';
 
 
 @NgModule({
@@ -14,11 +18,15 @@ import { AgoPipe } from './pipes';
     HorizontalGridComponent,
     CountDownComponent,
     BottomBarComponent,
+    VerticalGridComponent,
+    ProductCardComponent,
 
 
     GridItemDirective,
     GridItemImageDirective,
     GridItemTitleDirective,
+    TagDirective,
+    AvatarDirective,
     AgoPipe,
   ],
   imports: [
@@ -33,11 +41,14 @@ import { AgoPipe } from './pipes';
     HorizontalGridComponent,
     CountDownComponent,
     BottomBarComponent,
-
+    VerticalGridComponent,
+    ProductCardComponent,
 
     GridItemDirective,
     GridItemImageDirective,
     GridItemTitleDirective,
+    TagDirective,
+    AvatarDirective,
     AgoPipe
   ]
 })

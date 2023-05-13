@@ -22,7 +22,6 @@ export class HomeContainerComponent implements OnInit {
     this.menu$ = this.homeService.getTabs();
     this.selectedTabLink$ = this.route.firstChild.paramMap
       .pipe(
-        tap(params => console.log(params,'++++++')),
         filter(params => params.has('tabLink')),
         map(params => params.get('tabLink'))
       )

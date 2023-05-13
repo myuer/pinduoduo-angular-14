@@ -1,6 +1,19 @@
-:host{
+:host {
     display: flex;
     flex-direction: column;
     align-items: stretch;
-    flex: 1
+    flex: 1;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.ad-container {
+    padding: 0 0.5rem;
+    background-color: #fff;
+}
+
+.ad-image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
 }

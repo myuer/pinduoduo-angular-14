@@ -9,6 +9,7 @@ import { VerticalGridComponent } from './components/vertical-grid/vertical-grid.
 import { ProductCardComponent } from './components/product-card/product-card.component';
 import { TagDirective } from './directives/tag.directive';
 import { AvatarDirective } from './directives/avatar.directive';
+import { ProductTileComponent } from './components/product-tile/product-tile.component';
 
 
 @NgModule({
@@ -28,6 +29,7 @@ import { AvatarDirective } from './directives/avatar.directive';
     TagDirective,
     AvatarDirective,
     AgoPipe,
+    ProductTileComponent,
   ],
   imports: [
     CommonModule,
@@ -43,7 +45,9 @@ import { AvatarDirective } from './directives/avatar.directive';
     BottomBarComponent,
     VerticalGridComponent,
     ProductCardComponent,
+    ProductTileComponent,
 
+    
     GridItemDirective,
     GridItemImageDirective,
     GridItemTitleDirective,

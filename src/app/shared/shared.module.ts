@@ -1,16 +1,11 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { BottomBarComponent, CountDownComponent, ScrollableTabComponent, SwiperComponent } from './components';
-import { HorizontalGridComponent } from './components/horizontal-grid/horizontal-grid.component';
+import { BackBtnComponent, BottomBarComponent, CountDownComponent, HorizontalGridComponent, ProductCardComponent, ProductTileComponent, ScrollableTabComponent, SwiperComponent, VerticalGridComponent } from './components';
 import { GridItemDirective, GridItemImageDirective, GridItemTitleDirective } from './directives';
 import { AgoPipe } from './pipes';
-import { VerticalGridComponent } from './components/vertical-grid/vertical-grid.component';
-import { ProductCardComponent } from './components/product-card/product-card.component';
 import { TagDirective } from './directives/tag.directive';
 import { AvatarDirective } from './directives/avatar.directive';
-import { ProductTileComponent } from './components/product-tile/product-tile.component';
-
 
 @NgModule({
   declarations: [
@@ -21,6 +16,7 @@ import { ProductTileComponent } from './components/product-tile/product-tile.com
     BottomBarComponent,
     VerticalGridComponent,
     ProductCardComponent,
+    BackBtnComponent,
 
 
     GridItemDirective,
@@ -46,7 +42,7 @@ import { ProductTileComponent } from './components/product-tile/product-tile.com
     VerticalGridComponent,
     ProductCardComponent,
     ProductTileComponent,
-
+    BackBtnComponent,
     
     GridItemDirective,
     GridItemImageDirective,

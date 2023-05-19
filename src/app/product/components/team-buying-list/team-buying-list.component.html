@@ -1,0 +1,10 @@
+<div class="container">
+  <div class="title">
+    <span>{{ groupOrders.length }} 人在拼单，可直接参与</span>
+    <img src="assets/icons/navigate_next.png" alt="" />
+  </div>
+  <app-team-buying-item
+    *ngFor="let item of groupOrders"
+    [order]="item"
+  ></app-team-buying-item>
+</div>

@@ -9,8 +9,8 @@ export interface IImageSlider {
 
 class MyClass<T> {
   zeroValue: T;
-  constructor(zeroValue: T){
-     this.zeroValue = zeroValue
+  constructor(zeroValue: T) {
+    this.zeroValue = zeroValue
   };
   add: (x: T, y: T) => T;
 }
@@ -24,7 +24,7 @@ class MyClass<T> {
 export class SwiperComponent implements OnInit, AfterViewInit {
   @Input() sliders: IImageSlider[] = [];
   @Input() sliderHeight = '160px';
-  
+
   @ViewChildren('img') imgs: QueryList<ElementRef>
   @ViewChild('imageSlider') imgSlider: ElementRef;
   @Input() intervalBySeconds = 2000;
@@ -32,15 +32,15 @@ export class SwiperComponent implements OnInit, AfterViewInit {
 
   intervalId;
 
-   // 注解可以应用于变量，方法和类
-   @Emoji() result = '您好';
-   
+  // 注解可以应用于变量，方法和类
+  @Emoji() result = '您好';
+
   constructor(private rd2: Renderer2) { }
 
   ngOnInit() {
     let myClass = new MyClass<number>(12);
     console.log(myClass);
-    
+
   }
 
   /**
@@ -53,6 +53,9 @@ export class SwiperComponent implements OnInit, AfterViewInit {
     // this.imgs.forEach(item => {
     //   this.rd2.setStyle(item.nativeElement, 'height', '100px')
     // })
+    
+    // 终止自动轮播
+    if (this.intervalBySeconds <= 0) return;
 
     this.intervalId = setInterval(() => {
 
@@ -90,10 +93,10 @@ export class SwiperComponent implements OnInit, AfterViewInit {
 
   // 注解也可以接受参数
   @Confirmable("已经点击，是否确认执行？")
-  modal(){
+  modal() {
     console.log("已点击");
   }
 
 
-  
+
 }

@@ -22,7 +22,7 @@ export class CountDownComponent implements OnInit {
       map(sec => this.diffInSec(this.startTime, this.endTime) - sec),
       // 不满足条件就completed
       takeWhile(diffTime => diffTime >= 0),
-      map(  
+      map(
         (diffTime) => ({
           day: Math.floor(diffTime / (3600 * 24)),
           hour: Math.floor((diffTime / 3600) % 24),
@@ -30,7 +30,10 @@ export class CountDownComponent implements OnInit {
           second: Math.floor(diffTime % 60),
         })
       ),
-      map(({ day, hour, minute, second }) => `${day}天 ${String(hour).padStart(2, '0')}:${minute}:${second}`)
+      map(({ day, hour, minute, second }) => {
+        let hourString = `${String(hour).padStart(2, '0')}:${minute}:${second}`;
+        return day == 0 ? hourString : `${day}天 ${hourString}`
+      })
     )
 
   }

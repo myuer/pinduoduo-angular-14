@@ -7,9 +7,104 @@
     overflow-y: hidden;
 }
 
-app-back-btn{
+app-back-btn {
     position: fixed;
     left: 1rem;
     top: 1.2rem;
     z-index: 2000;
+}
+
+.price-section {
+    display: grid;
+    grid-template-columns: 25% 25% 1fr;
+    place-content: start;
+    place-items: baseline;
+    grid-gap: 3px;
+    margin: 0 5px;
+}
+
+.title,
+.coupon,
+.guarantee,
+.team-buying-list,
+.toolbar {
+    grid-column: 1/4;
+}
+
+.price-section .now-price {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #e02f29;
+}
+
+/* 原价 */
+.price-section .list-price {
+    color: #3f3f3f;
+    text-decoration: line-through;
+}
+
+.price-section .sales-count {
+    justify-self: end;
+}
+
+.price-section .title {
+    font-weight: 400;
+    font-size: 1.2rem;
+    margin: 5px 0;
+}
+
+.price-section .desc {
+    margin-left: 10px;
+    color: #3f3f3f;
+}
+
+.price-section .guarantee {
+    margin: 5px 0;
+    color: darkgrey;
+    font-size: 1.1rem;
+}
+
+.team-buying-list {
+    width: 100%;
+    padding: 0.4rem 0;
+}
+
+.toolbar {
+    display: flex;
+    justify-content: space-between;
+
+    position: absolute;
+    bottom: 4rem;
+    width: 100%;
+
+}
+
+.icon-button img {
+    width: 2rem;
+    height: 2rem;
+}
+
+.toolbar .icon-button {
+    font-size: 0.8rem;
+    color: #3f3f3f;
+}
+
+.toolbar .direct-buy {
+    background: #e9aeaa;
+    color: #fff;
+    flex: 1;
+    margin-left: 5px;
+}
+
+.toolbar div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.toolbar .group-buy {
+    background: #e02f29;
+    color: #fff;
+    flex: 1;
 }

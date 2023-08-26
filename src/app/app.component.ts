@@ -3,6 +3,7 @@ import { BottomBar, BottomBarMap, IBottomBarItem } from './shared/components';
 import { Observable } from 'rxjs';
 import { NavigationEnd, Router } from '@angular/router';
 import { filter, map, tap } from 'rxjs/operators';
+import { DialogService } from './dialog';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -10,9 +11,10 @@ import { filter, map, tap } from 'rxjs/operators';
 })
 export class AppComponent implements OnInit {
 
+
   selectedBarIdx$: Observable<number>;
 
-  constructor(private router: Router) {
+  constructor(private router: Router, private dialogService: DialogService) {
 
   }
 

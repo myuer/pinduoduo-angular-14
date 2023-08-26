@@ -63,13 +63,13 @@
         <img src="/assets/icons/customer-service.png" alt="" />
         <div>客服</div>
       </div>
-      <div class="direct-buy">
+      <div class="direct-buy" (click)="handleDirectBuy(productVariants)">
         <div>
           {{ product.listPrice | currency : "CNY" }}
         </div>
         <div>直接购买</div>
       </div>
-      <div class="group-buy">
+      <div class="group-buy" (click)="handleGroupBuy(productVariants)">
         <div>{{ product.price | currency : "CNY" }}</div>
         <div>发起拼单</div>
       </div>

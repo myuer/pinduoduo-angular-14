@@ -6,6 +6,7 @@ import { GridItemDirective, GridItemImageDirective, GridItemTitleDirective } fro
 import { AgoPipe } from './pipes';
 import { TagDirective } from './directives/tag.directive';
 import { AvatarDirective } from './directives/avatar.directive';
+import { DialogModule } from '../dialog/dialog.module';
 
 @NgModule({
   declarations: [
@@ -29,11 +30,14 @@ import { AvatarDirective } from './directives/avatar.directive';
   ],
   imports: [
     CommonModule,
-    FormsModule
+    FormsModule,
+    DialogModule
   ],
   exports: [
     CommonModule,
     FormsModule,
+    DialogModule,
+
     ScrollableTabComponent,
     SwiperComponent,
     HorizontalGridComponent,
@@ -43,7 +47,7 @@ import { AvatarDirective } from './directives/avatar.directive';
     ProductCardComponent,
     ProductTileComponent,
     BackBtnComponent,
-    
+
     GridItemDirective,
     GridItemImageDirective,
     GridItemTitleDirective,

@@ -3,3 +3,5 @@
   [selectedBarIdx]="selectedBarIdx$ | async"
   (selectedBar)="toggleBar($event)"
 ></app-bottom-bar>
+<div id="overlay" [ngClass]="'hidden'" appCloseDialog></div>
+<div id="dialog-container" [ngClass]="'hidden'" ></div>

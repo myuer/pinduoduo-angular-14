@@ -4,6 +4,8 @@ import { ActivatedRoute } from '@angular/router';
 import { filter, map, switchMap } from 'rxjs/operators';
 import { Observable } from 'rxjs';
 import { IGroupOrder, IProductVariant } from '../../interface';
+import { DialogService } from 'src/app/dialog';
+import { ProductVariantDialogComponent } from '../product-variant-dialog/product-variant-dialog.component';
 
 @Component({
   selector: 'app-product-container',
@@ -18,7 +20,8 @@ export class ProductContainerComponent implements OnInit {
 
   constructor(
     private route: ActivatedRoute,
-    private orderService: OrderService
+    private orderService: OrderService,
+    private dialogService: DialogService
   ) { }
 
   ngOnInit(): void {
@@ -50,5 +53,23 @@ export class ProductContainerComponent implements OnInit {
     ];
 
   }
+
+  handleDirectBuy(variants: IProductVariant[]) { }
+
+  handleGroupBuy(variants: IProductVariant[]) {
+    const top = 40;
+    // 打开弹框
+    this.dialogService.open(ProductVariantDialogComponent, {
+      inputs: {},
+      outputs: {},
+      position: {
+        top: `${top}%`,
+        left: '50%',
+        width: '100%',
+        height: `${100 - top}%`
+      }
+    })
+  }
+
 
 }
